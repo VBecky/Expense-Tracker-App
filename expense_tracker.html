@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="login-box">
+    <h2>📧 Email Login</h2>
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="pass" placeholder="Enter Password">
+    <button id="loginBtn">Login</button>
+    <p id="error"></p>
+    <p class="hint">Demo: test@gmail.com / 1234</p>
+</div>
+
+<!-- APP PAGE -->
+<div id="appPage" class="container hidden">
+
+    <h1>💸 Expense Tracker</h1>
+
+    <div class="top-buttons">
+        <button id="darkBtn">🌙 Dark</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="summary">
+        <div class="card green">
+            <h3>Today</h3>
+            <p id="today">ETB0</p>
+        </div>
+        <div class="card blue">
+            <h3>This Month</h3>
+            <p id="month">ETB0</p>
+        </div>
+        <div class="card pink">
+            <h3>This Year</h3>
+            <p id="year">ETB0</p>
+        </div>
+    </div>
+
+    <div class="form">
+        <input type="text" id="desc" placeholder="Description">
+        <input type="number" id="amount" placeholder="Amount">
+
+        <select id="category">
+            <option>Food</option>
+            <option>Bills</option>
+            <option>Shopping</option>
+            <option>Travel</option>
+            <option>Entertainment</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Other</option>
+        </select>
+
+        <button id="addBtn">Add</button>
+        <button id="exportBtn">Export</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search...">
+
+    <canvas id="pieChart"></canvas>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
